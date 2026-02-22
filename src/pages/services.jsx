@@ -1,50 +1,139 @@
 import React from 'react';
+import { Camera, Video, Megaphone, Users, Briefcase, TrendingUp, Award, Globe } from 'lucide-react';
 
 function Services() {
+  const services = [
+    {
+      icon: Megaphone,
+      title: "Strategic Communication",
+      desc: "Comprehensive communication strategies that align with your business objectives and enhance your brand reputation.",
+      details: "We develop tailored communication plans, manage stakeholder engagement, and create compelling narratives that resonate with your target audiences.",
+      image: "/images/comm1.png"
+    },
+    {
+      icon: Users,
+      title: "Media Relations",
+      desc: "Building and maintaining strong relationships with media outlets across traditional and digital platforms.",
+      details: "Our extensive media network includes partnerships with BBC, CNN, CNBC, Nation Media, Standard Group, and leading Kenyan broadcasters.",
+      image: "/images/media1.png"
+    },
+    {
+      icon: Camera,
+      title: "Multi-Media Production",
+      desc: "Professional photography, videography, and content creation for all your communication needs.",
+      details: "From corporate videos to event coverage, we deliver high-quality visual content that tells your story effectively.",
+      image: "/images/comm2.png"
+    },
+    {
+      icon: Briefcase,
+      title: "Events Management",
+      desc: "End-to-end event planning and execution for conferences, product launches, and corporate gatherings.",
+      details: "We've successfully managed high-profile events including Africa Climate Summit, Magical Kenya Open, and Coffee & Chocolate Week.",
+      image: "/images/media2.png"
+    },
+    {
+      icon: Video,
+      title: "Film Production",
+      desc: "Full-service film production including documentaries, commercials, and corporate films.",
+      details: "Our production team handles everything from concept development to post-production, delivering broadcast-quality content.",
+      image: "/images/comm3.png"
+    },
+    {
+      icon: TrendingUp,
+      title: "Digital Marketing",
+      desc: "Integrated digital strategies including social media management, content marketing, and online campaigns.",
+      details: "We leverage digital platforms to amplify your message, engage audiences, and drive measurable results.",
+      image: "/images/media3.png"
+    },
+    {
+      icon: Award,
+      title: "Crisis Management",
+      desc: "Rapid response and strategic guidance to protect your reputation during challenging times.",
+      details: "Our crisis communication experts provide 24/7 support, media training, and reputation recovery strategies.",
+      image: "/images/comm4.png"
+    },
+    {
+      icon: Globe,
+      title: "Training & Capacity Building",
+      desc: "Professional development programs in communication, media relations, and public speaking.",
+      details: "Customized training workshops for teams and individuals to enhance communication skills and media readiness.",
+      image: "/images/media4.png"
+    }
+  ];
+
   return (
     <div className="pt-20">
-      <section className="py-12 sm:py-16 md:py-24">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-gray-900 text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Services</h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">360° Corporate Communications Solutions Tailored to Your Needs</p>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          {services.map((service, i) => (
+            <div key={i} className={`mb-20 grid md:grid-cols-2 gap-8 items-center ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+              <div className={`${i % 2 === 1 ? 'md:order-2' : ''}`}>
+                <div className="relative group">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl blur-xl opacity-25 group-hover:opacity-40 transition"></div>
+                  <img src={service.image} alt={service.title} className="relative rounded-2xl shadow-2xl w-full" />
+                </div>
+              </div>
+              <div className={`${i % 2 === 1 ? 'md:order-1' : ''}`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <service.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold text-gray-900">{service.title}</h3>
+                </div>
+                <p className="text-xl text-gray-700 mb-4 font-semibold">{service.desc}</p>
+                <p className="text-lg text-gray-600 leading-relaxed">{service.details}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12">Our Services</h2>
-          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
-            <div className="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-xl mb-4">Expertise</h3>
-              <p>Deep knowledge in PR, media, and events across Africa.</p>
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Why Choose NEXTWave</h2>
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="text-center p-6 bg-blue-50 rounded-xl hover:shadow-lg transition">
+              <div className="text-4xl font-bold text-blue-600 mb-2">8+</div>
+              <p className="text-gray-700 font-semibold">Years Experience</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-xl mb-4">Creative Solutions</h3>
-              <p>Innovative strategies for brand reputation management.</p>
+            <div className="text-center p-6 bg-blue-50 rounded-xl hover:shadow-lg transition">
+              <div className="text-4xl font-bold text-blue-600 mb-2">150+</div>
+              <p className="text-gray-700 font-semibold">Happy Clients</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-xl mb-4">Attention to Detail</h3>
-              <p>Meticulous planning for flawless execution.</p>
+            <div className="text-center p-6 bg-blue-50 rounded-xl hover:shadow-lg transition">
+              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
+              <p className="text-gray-700 font-semibold">Projects Completed</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-xl mb-4">Client-Centric</h3>
-              <p>Tailored approaches to meet unique client needs.</p>
+            <div className="text-center p-6 bg-blue-50 rounded-xl hover:shadow-lg transition">
+              <div className="text-4xl font-bold text-blue-600 mb-2">25+</div>
+              <p className="text-gray-700 font-semibold">Team Members</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Elevate Your Brand?</h2>
+          <p className="text-xl mb-8 opacity-90">Let's discuss how we can help you achieve your communication goals</p>
+          <a href="/contact" className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl hover:shadow-2xl">
+            Get Started Today
+          </a>
         </div>
       </section>
     </div>
