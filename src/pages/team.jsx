@@ -5,17 +5,14 @@ function Team() {
 
   const teamMembers = [
     { name: "Syindu Musesya (Poshia)", role: "Project Lead / Managing Director", bio: "9+ years in communications, events & project management. Experienced in strategic planning and execution for international clients.", img: "/images/syindu-musesya.jpg" },
-    { name: "Lilian Wanjiru", role: "Communications Specialist", bio: "Expert in strategic communications, media relations, and content development with extensive experience in corporate communications.", img: "/images/staff-1.png" },
-    { name: "James Kariuki", role: "Creative Director", bio: "Specializes in graphic design, branding, and creative campaigns with a passion for visual storytelling.", img: "/images/staff-2.png" },
-    { name: "Mary Njeri", role: "Events Manager", bio: "Experienced in planning and executing high-profile events across East Africa with attention to detail.", img: "/images/staff.png" },
   ];
 
   return (
     <div className="pt-20">
       <section className="py-12 sm:py-16 md:py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12">Meet the Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12">Meet Our CEO</h2>
+          <div className="flex justify-center">
             {teamMembers.map((member, i) => (
               <div key={i} onClick={() => setSelectedTeam(member)} className="bg-white rounded-3xl overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition">
                 <img src={member.img} alt={member.name} className="w-full h-64 sm:h-80 object-cover" />

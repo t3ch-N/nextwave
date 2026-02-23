@@ -4,6 +4,7 @@ import { Award, Users, Briefcase, TrendingUp, Target, Eye, Heart, CheckCircle } 
 function About() {
   const [counts, setCounts] = useState({ years: 0, clients: 0, projects: 0, team: 0 });
   const [activeValue, setActiveValue] = useState(0);
+  const [selectedTeam, setSelectedTeam] = useState(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -40,14 +41,12 @@ function About() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-gray-900 text-white py-24 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        </div>
+      <section className="relative text-white py-24 overflow-hidden">
+        <img src="/images/Frame 4.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">About NEXTWave</h1>
-          <p className="text-xl md:text-2xl max-w-3xl opacity-90">Building, strengthening, and defending reputations through innovative integrated marketing and communications solutions</p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in drop-shadow-lg">About Nextwave</h1>
+          <p className="text-xl md:text-2xl max-w-3xl opacity-90 drop-shadow-lg">Building, strengthening, and defending reputations through innovative integrated marketing and communications solutions</p>
         </div>
       </section>
 
@@ -79,7 +78,7 @@ function About() {
           <div>
             <h2 className="text-4xl font-bold mb-6 text-gray-900">Our Story</h2>
             <p className="text-lg leading-relaxed mb-4 text-gray-700">
-              Founded in <span className="font-bold text-blue-600">2017</span>, NEXTWave Public Relations Ltd is a full-fledged, 360-degree corporate communications company that has transformed how organizations communicate in East Africa.
+              Founded in <span className="font-bold text-blue-600">2017</span>, Nextwave Public Relations Ltd is a full-fledged, 360-degree corporate communications company that has transformed how organizations communicate in East Africa.
             </p>
             <p className="text-lg leading-relaxed mb-4 text-gray-700">
               We specialize in creative design, strategic communication, multidisciplinary training, film production, media relations, events management, and public relations for local and international clients across private, public, and development sectors.
@@ -183,21 +182,51 @@ function About() {
           <div className="relative">
             <div className="flex animate-scroll">
               {['bbc', 'cnn', 'cnbc', 'nation', 'the-standard', 'ntv', 'ktn', 'k24', 'citizen', 'the-star', 'business-daily', 'the-east-african'].map((media, i) => (
-                <img key={i} src={`/images/${media}.png`} alt={media} className="h-12 mx-8 object-contain grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <img key={i} src={`/images/${media}.png`} alt={media} className="h-12 mx-8 object-contain transition-all flex-shrink-0" />
               ))}
               {['bbc', 'cnn', 'cnbc', 'nation', 'the-standard', 'ntv', 'ktn', 'k24', 'citizen', 'the-star', 'business-daily', 'the-east-african'].map((media, i) => (
-                <img key={`dup-${i}`} src={`/images/${media}.png`} alt={media} className="h-12 mx-8 object-contain grayscale hover:grayscale-0 transition-all flex-shrink-0" />
+                <img key={`dup-${i}`} src={`/images/${media}.png`} alt={media} className="h-12 mx-8 object-contain transition-all flex-shrink-0" />
               ))}
             </div>
           </div>
         </div>
       </section>
 
+      {/* CEO Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Meet Our CEO</h2>
+          <div className="flex justify-center">
+            <div onClick={() => setSelectedTeam({ name: "Syindu Musesya (Poshia)", role: "Project Lead / Managing Director", bio: "9+ years in communications, events & project management. Experienced in strategic planning and execution for international clients.", img: "/images/syindu-musesya.jpg" })} className="bg-white rounded-3xl overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition max-w-sm">
+              <img src="/images/syindu-musesya.jpg" alt="Syindu Musesya" className="w-full h-80 object-cover" />
+              <div className="p-6">
+                <h4 className="font-semibold text-xl">Syindu Musesya (Poshia)</h4>
+                <p className="text-blue-600">Project Lead / Managing Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {selectedTeam && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4 sm:p-6" onClick={() => setSelectedTeam(null)}>
+          <div className="bg-white max-w-2xl w-full rounded-3xl p-6 sm:p-8 md:p-10" onClick={e => e.stopPropagation()}>
+            <img src={selectedTeam.img} alt="" className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto mb-4 sm:mb-6" />
+            <h3 className="text-2xl sm:text-3xl font-bold text-center">{selectedTeam.name}</h3>
+            <p className="text-blue-600 text-center mb-6 sm:mb-8">{selectedTeam.role}</p>
+            <p className="text-base sm:text-lg leading-relaxed">{selectedTeam.bio}</p>
+            <button onClick={() => setSelectedTeam(null)} className="mt-10 mx-auto block text-sm uppercase tracking-widest">Close</button>
+          </div>
+        </div>
+      )}
+
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Communication?</h2>
-          <p className="text-xl mb-8 opacity-90">Let's build your brand's reputation together</p>
+      <section className="relative text-white py-20 overflow-hidden">
+        <img src="/images/Frame 4.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+          <h2 className="text-4xl font-bold mb-6 drop-shadow-lg">Ready to Transform Your Communication?</h2>
+          <p className="text-xl mb-8 opacity-90 drop-shadow-lg">Let's build your brand's reputation together</p>
           <a href="/contact" className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl hover:shadow-2xl">
             Get in Touch
           </a>

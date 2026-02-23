@@ -5,8 +5,12 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
-import Team from './pages/Team';
 import Contact from './pages/Contact';
+import AfricaClimateSummit from './pages/events/AfricaClimateSummit';
+import MagicalKenyaOpen from './pages/events/MagicalKenyaOpen';
+import WashCampaign from './pages/events/WashCampaign';
+import WaterSanitationNarsip from './pages/events/WaterSanitationNarsip';
+import CorporateEvents from './pages/events/CorporateEvents';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,7 +27,6 @@ function App() {
             <Link to="/about" className="hover:text-blue-600 transition">About</Link>
             <Link to="/services" className="hover:text-blue-600 transition">Services</Link>
             <Link to="/portfolio" className="hover:text-blue-600 transition">Portfolio</Link>
-            <Link to="/team" className="hover:text-blue-600 transition">Team</Link>
             <Link to="/contact" className="hover:text-blue-600 transition">Contact</Link>
           </div>
 
@@ -36,7 +39,6 @@ function App() {
             <Link to="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
             <Link to="/services" onClick={() => setMobileMenuOpen(false)}>Services</Link>
             <Link to="/portfolio" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
-            <Link to="/team" onClick={() => setMobileMenuOpen(false)}>Team</Link>
             <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
         )}
@@ -47,8 +49,12 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/events/africa-climate-summit" element={<AfricaClimateSummit />} />
+        <Route path="/events/magical-kenya-open" element={<MagicalKenyaOpen />} />
+        <Route path="/events/wash-campaign" element={<WashCampaign />} />
+        <Route path="/events/water-sanitation-narsip" element={<WaterSanitationNarsip />} />
+        <Route path="/events/corporate-events" element={<CorporateEvents />} />
       </Routes>
 
       <footer className="bg-gray-900 text-white py-12 text-center">

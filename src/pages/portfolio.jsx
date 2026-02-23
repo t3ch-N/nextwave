@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function Portfolio() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -64,33 +65,6 @@ function Portfolio() {
                   ))}
                 </div>
               </div>
-              <button
-                onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-              <div className="flex justify-center gap-2 mt-4">
-                {commImages.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setCurrentSlide(i)}
-                    className={`w-2 h-2 rounded-full transition ${
-                      i === currentSlide ? 'bg-blue-600 w-8' : 'bg-gray-400'
-                    }`}
-                  />
-                ))}
-              </div>
             </div>
           </div>
 
@@ -107,30 +81,36 @@ function Portfolio() {
               </div>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
-              <div className="group relative overflow-hidden rounded-xl aspect-video">
-                <img src="/images/event-acs.jpg" alt="Africa Climate Summit" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+              <Link to="/events/africa-climate-summit" className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer">
+                <img src="/images/Africa-Climate-Summit-2025-2.webp" alt="Africa Climate Summit" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
                   <p className="text-white text-sm font-semibold">Africa Climate Summit</p>
                 </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl aspect-video">
-                <img src="/images/event-mko.jpg" alt="Magical Kenya Open" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+              </Link>
+              <Link to="/events/magical-kenya-open" className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer">
+                <img src="/images/magicalkenyaopen.webp" alt="Magical Kenya Open" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
                   <p className="text-white text-sm font-semibold">Magical Kenya Open</p>
                 </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl aspect-video">
-                <img src="/images/event-ccw.jpg" alt="Coffee & Chocolate Week" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+              </Link>
+              <Link to="/events/wash-campaign" className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer">
+                <img src="/images/athi/1758185938701.jpg" alt="WASH Campaign Roadshow" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
-                  <p className="text-white text-sm font-semibold">Coffee & Chocolate Week</p>
+                  <p className="text-white text-sm font-semibold">WASH Campaign Roadshow</p>
                 </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-xl aspect-video">
-                <img src="/images/event-4.jpg" alt="Corporate Event" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+              </Link>
+              <Link to="/events/water-sanitation-narsip" className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer">
+                <img src="/images/athi/1758185939343.jpg" alt="Water Sanitation NaRSIP II" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                  <p className="text-white text-sm font-semibold">Water Sanitation NaRSIP II</p>
+                </div>
+              </Link>
+              <Link to="/events/corporate-events" className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer">
+                <img src="/images/corporateevents.png" alt="Corporate Event" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
                   <p className="text-white text-sm font-semibold">Corporate Events</p>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
