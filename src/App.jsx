@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
+import CaseStudies from './pages/CaseStudies';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import AfricaClimateSummit from './pages/events/AfricaClimateSummit';
@@ -26,6 +27,7 @@ function App() {
           <div className="hidden md:flex gap-8 text-sm font-medium">
             <Link to="/about" className="hover:text-blue-600 transition">About</Link>
             <Link to="/services" className="hover:text-blue-600 transition">Services</Link>
+            <Link to="/case-studies" className="hover:text-blue-600 transition">Case Studies</Link>
             <Link to="/portfolio" className="hover:text-blue-600 transition">Portfolio</Link>
             <Link to="/contact" className="hover:text-blue-600 transition">Contact</Link>
           </div>
@@ -38,6 +40,7 @@ function App() {
           <div className="md:hidden bg-white px-6 py-4 flex flex-col gap-4">
             <Link to="/about" onClick={() => setMobileMenuOpen(false)}>About</Link>
             <Link to="/services" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+            <Link to="/case-studies" onClick={() => setMobileMenuOpen(false)}>Case Studies</Link>
             <Link to="/portfolio" onClick={() => setMobileMenuOpen(false)}>Portfolio</Link>
             <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
@@ -48,6 +51,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/events/africa-climate-summit" element={<AfricaClimateSummit />} />

@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 function Portfolio() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const commImages = [
-    { src: '/images/comm1.png', alt: 'Multi-media Production' },
-    { src: '/images/comm2.png', alt: 'Professional Photography' },
-    { src: '/images/comm3.png', alt: 'Graphic Design' },
-    { src: '/images/comm4.png', alt: 'Creative Content' },
-    { src: '/images/media1.png', alt: 'Media Coverage' },
-    { src: '/images/media2.png', alt: 'Media Relations' },
-    { src: '/images/media3.png', alt: 'Press Events' },
-    { src: '/images/media4.png', alt: 'Media Engagement' }
+    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0118.jpg', alt: 'Event Coverage' },
+    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0119.jpg', alt: 'Professional Photography' },
+    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0120.jpg', alt: 'Event Documentation' },
+    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0121.jpg', alt: 'Conference Coverage' },
+    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0124.jpg', alt: 'Media Production' },
+    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0127.jpg', alt: 'Event Photography' },
+    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0132.jpg', alt: 'Professional Coverage' },
+    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0136.jpg', alt: 'Event Management' }
   ];
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function Portfolio() {
       setCurrentSlide((prev) => (prev + 1) % commImages.length);
     }, 3000);
     return () => clearInterval(timer);
-  }, []);
+  }, [commImages.length]);
 
   const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % commImages.length);
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + commImages.length) % commImages.length);
@@ -58,7 +58,7 @@ function Portfolio() {
                       key={i}
                       src={img.src}
                       alt={img.alt}
-                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+                      className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-500 ${
                         i === currentSlide ? 'opacity-100' : 'opacity-0'
                       }`}
                     />
