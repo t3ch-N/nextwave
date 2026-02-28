@@ -18,7 +18,6 @@ function CaseStudies() {
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-gray-100 rounded-lg p-6">
-                <img src="/images/case-studies/placeholder-1.jpg" alt="Project Overview" className="w-full h-64 object-cover rounded-lg mb-4" />
                 <h3 className="text-2xl font-bold mb-4">Project Overview</h3>
                 <p className="text-gray-700 leading-relaxed">
                   Comprehensive communication services delivered for sustainable development and water sanitation projects across Kenya.
@@ -26,7 +25,6 @@ function CaseStudies() {
               </div>
               
               <div className="bg-gray-100 rounded-lg p-6">
-                <img src="/images/case-studies/placeholder-2.jpg" alt="Scope of Work" className="w-full h-64 object-cover rounded-lg mb-4" />
                 <h3 className="text-2xl font-bold mb-4">Scope of Work</h3>
                 <ul className="list-disc pl-6 text-gray-700 space-y-2">
                   <li>Strategic communication planning and implementation</li>
@@ -41,19 +39,16 @@ function CaseStudies() {
               <h3 className="text-2xl font-bold mb-6">Key Deliverables</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="border rounded-lg p-6">
-                  <img src="/images/case-studies/placeholder-3.jpg" alt="Communication Strategy" className="w-full h-48 object-cover rounded-lg mb-4" />
                   <h4 className="text-xl font-semibold mb-3">Communication Strategy</h4>
                   <p className="text-gray-600">Developed comprehensive communication frameworks aligned with project objectives</p>
                 </div>
                 
                 <div className="border rounded-lg p-6">
-                  <img src="/images/case-studies/placeholder-4.jpg" alt="Media Coverage" className="w-full h-48 object-cover rounded-lg mb-4" />
                   <h4 className="text-xl font-semibold mb-3">Media Coverage</h4>
                   <p className="text-gray-600">Secured extensive media coverage across national and regional outlets</p>
                 </div>
                 
                 <div className="border rounded-lg p-6">
-                  <img src="/images/case-studies/placeholder-5.jpg" alt="Stakeholder Reports" className="w-full h-48 object-cover rounded-lg mb-4" />
                   <h4 className="text-xl font-semibold mb-3">Stakeholder Reports</h4>
                   <p className="text-gray-600">Regular reporting and documentation for all project stakeholders</p>
                 </div>
@@ -64,7 +59,6 @@ function CaseStudies() {
               <h3 className="text-2xl font-bold mb-6">Impact & Results</h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <img src="/images/case-studies/placeholder-6.jpg" alt="Impact Metrics" className="w-full h-64 object-cover rounded-lg mb-4" />
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start">
                       <span className="text-blue-600 font-bold mr-3">✓</span>
@@ -81,7 +75,6 @@ function CaseStudies() {
                   </ul>
                 </div>
                 <div>
-                  <img src="/images/case-studies/placeholder-7.jpg" alt="Project Success" className="w-full h-64 object-cover rounded-lg mb-4" />
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start">
                       <span className="text-blue-600 font-bold mr-3">✓</span>
@@ -100,10 +93,7 @@ function CaseStudies() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <img src="/images/case-studies/placeholder-8.jpg" alt="Project Gallery 1" className="w-full h-80 object-cover rounded-lg shadow-lg" />
-              <img src="/images/case-studies/placeholder-9.jpg" alt="Project Gallery 2" className="w-full h-80 object-cover rounded-lg shadow-lg" />
-            </div>
+
           </div>
         </div>
       </section>
