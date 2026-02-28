@@ -16,6 +16,9 @@ dist-ssr
 public/videos/*.mp4
 public/videos/*.crdownload
 public/images/**/*.mp4
+public/images/**/*.zip
+public/images/IACCTW - GLEE HOTEL EDITED/
+public/images/IACCTW - GLEE HOTEL EDITED-3-001.zip
 
 # Editor directories and files
 .vscode/*
