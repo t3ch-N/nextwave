@@ -1,17 +1,6 @@
-import React, { useState, useRef } from 'react';
-import { Volume2, VolumeX } from 'lucide-react';
+import React from 'react';
 
 function WaterSanitationNarsip() {
-  const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef(null);
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
-
   return (
     <div className="pt-20">
       <section className="relative text-white py-20 overflow-hidden">
@@ -27,21 +16,16 @@ function WaterSanitationNarsip() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {/* Video Section */}
           <div className="relative mb-12 rounded-2xl overflow-hidden shadow-2xl">
-            <video
-              ref={videoRef}
-              className="w-full"
-              src="/videos/Kenya39;s water sanitation crisis in NaRSIP II  Poshia Musesya  (MPRSK) M.A. posted on the topic  LinkedIn.mp4"
-              controls
-              muted={isMuted}
-              playsInline
-            />
-            <button
-              onClick={toggleMute}
-              className="absolute top-4 right-4 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-3 rounded-full transition"
-              aria-label={isMuted ? "Unmute video" : "Mute video"}
-            >
-              {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
-            </button>
+            <div className="relative" style={{paddingBottom: '56.25%', height: 0}}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE"
+                title="Kenya's Water Sanitation Crisis"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
 
           {/* Context Information */}
