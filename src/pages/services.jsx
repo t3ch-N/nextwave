@@ -8,56 +8,56 @@ function Services() {
       title: "Strategic Communication",
       desc: "Comprehensive communication strategies that align with your business objectives and enhance your brand reputation.",
       details: "We develop tailored communication plans, manage stakeholder engagement, and create compelling narratives that resonate with your target audiences.",
-      images: ["/images/IACCTW - GLEE HOTEL EDITED/DSC_0032.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0035.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0037.jpg"]
+      images: ["/images/comm/comm1.png", "/images/comm/comm2.png", "/images/comm/comm3.png"]
     },
     {
       icon: Users,
       title: "Media Relations",
       desc: "Building and maintaining strong relationships with media outlets across traditional and digital platforms.",
       details: "Our extensive media network includes partnerships with BBC, CNN, CNBC, Nation Media, Standard Group, and leading Kenyan broadcasters.",
-      images: ["/images/IACCTW - GLEE HOTEL EDITED/DSC_0039.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0040.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0042.jpg"]
+      images: ["/images/media1.png", "/images/media2.png", "/images/media3.png"]
     },
     {
       icon: Camera,
       title: "Multi-Media Production",
       desc: "Professional photography, videography, and content creation for all your communication needs.",
       details: "From corporate videos to event coverage, we deliver high-quality visual content that tells your story effectively.",
-      images: ["/images/IACCTW - GLEE HOTEL EDITED/DSC_0043.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0049.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0050.jpg"]
+      images: ["/images/comm/comm4.png", "/images/media4.png", "/images/media-relations.png"]
     },
     {
       icon: Briefcase,
       title: "Events Management",
       desc: "End-to-end event planning and execution for conferences, product launches, and corporate gatherings.",
       details: "We've successfully managed high-profile events including Africa Climate Summit, Magical Kenya Open, and Coffee & Chocolate Week.",
-      images: ["/images/IACCTW - GLEE HOTEL EDITED/DSC_0051.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0052.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0060.jpg"]
+      images: ["/images/corporateevents.png", "/images/Africa-Climate-Summit-2025-2.webp", "/images/magicalkenyaopen.webp"]
     },
     {
       icon: Video,
       title: "Film Production",
       desc: "Full-service film production including documentaries, commercials, and corporate films.",
       details: "Our production team handles everything from concept development to post-production, delivering broadcast-quality content.",
-      images: ["/images/IACCTW - GLEE HOTEL EDITED/DSC_0061.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0063.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0064.jpg"]
+      images: ["/images/comm/comm1.png", "/images/comm/comm2.png", "/images/comm/comm3.png"]
     },
     {
       icon: TrendingUp,
       title: "Digital Marketing",
       desc: "Integrated digital strategies including social media management, content marketing, and online campaigns.",
       details: "We leverage digital platforms to amplify your message, engage audiences, and drive measurable results.",
-      images: ["/images/IACCTW - GLEE HOTEL EDITED/DSC_0066.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0069.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0070.jpg"]
+      images: ["/images/media1.png", "/images/media2.png", "/images/media3.png"]
     },
     {
       icon: Award,
       title: "Crisis Management",
       desc: "Rapid response and strategic guidance to protect your reputation during challenging times.",
       details: "Our crisis communication experts provide 24/7 support, media training, and reputation recovery strategies.",
-      images: ["/images/IACCTW - GLEE HOTEL EDITED/DSC_0071.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0101.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0102.jpg"]
+      images: ["/images/comm/comm4.png", "/images/media4.png", "/images/media-relations.png"]
     },
     {
       icon: Globe,
       title: "Training & Capacity Building",
       desc: "Professional development programs in communication, media relations, and public speaking.",
       details: "Customized training workshops for teams and individuals to enhance communication skills and media readiness.",
-      images: ["/images/IACCTW - GLEE HOTEL EDITED/DSC_0109.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0115.jpg", "/images/IACCTW - GLEE HOTEL EDITED/DSC_0116.jpg"]
+      images: ["/images/corporateevents.png", "/images/Africa-Climate-Summit-2025-2.webp", "/images/magicalkenyaopen.webp"]
     },
     {
       icon: Droplet,

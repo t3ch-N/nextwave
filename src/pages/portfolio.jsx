@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 function Portfolio() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const commImages = [
-    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0118.jpg', alt: 'Event Coverage' },
-    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0119.jpg', alt: 'Professional Photography' },
-    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0120.jpg', alt: 'Event Documentation' },
-    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0121.jpg', alt: 'Conference Coverage' },
-    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0124.jpg', alt: 'Media Production' },
-    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0127.jpg', alt: 'Event Photography' },
-    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0132.jpg', alt: 'Professional Coverage' },
-    { src: '/images/IACCTW - GLEE HOTEL EDITED/DSC_0136.jpg', alt: 'Event Management' }
+    { src: '/images/comm/comm1.png', alt: 'Event Coverage' },
+    { src: '/images/comm/comm2.png', alt: 'Professional Photography' },
+    { src: '/images/comm/comm3.png', alt: 'Event Documentation' },
+    { src: '/images/comm/comm4.png', alt: 'Conference Coverage' },
+    { src: '/images/media1.png', alt: 'Media Production' },
+    { src: '/images/media2.png', alt: 'Event Photography' },
+    { src: '/images/media3.png', alt: 'Professional Coverage' },
+    { src: '/images/media4.png', alt: 'Event Management' }
   ];
 
   useEffect(() => {
