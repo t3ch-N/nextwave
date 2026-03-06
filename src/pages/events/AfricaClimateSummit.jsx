@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import SEO from '../../components/SEO';
+import CTASection from '../../components/CTASection';
+import Breadcrumbs from '../../components/Breadcrumbs';
+import LazyImage from '../../components/LazyImage';
 
 function AfricaClimateSummit() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -16,9 +20,15 @@ function AfricaClimateSummit() {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
 
   return (
-    <div className="pt-20">
+    <div className="pt-0">
+      <SEO 
+        title="Africa Climate Summit"
+        description="Nextwave PR's role in managing communications and media relations for the landmark Africa Climate Summit addressing climate change across Africa."
+        image="/images/Africa-Climate-Summit/Africa-Climate-Summit-2025-2.jpg"
+      />
+      <Breadcrumbs />
       <section className="relative text-white py-20 overflow-hidden">
-        <img src="/images/Frame 4.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/NEXTWAVE UPDATED LOGOS/NW-BRAND PATTERN.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">Africa Climate Summit</h1>
@@ -29,16 +39,16 @@ function AfricaClimateSummit() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="relative mb-12 rounded-2xl overflow-hidden shadow-2xl">
-            <img src={images[currentSlide]} alt={`Africa Climate Summit ${currentSlide + 1}`} className="w-full h-[500px] object-cover" />
-            <button onClick={prevSlide} className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full transition">
+            <LazyImage src={images[currentSlide]} alt={`Africa Climate Summit ${currentSlide + 1}`} className="w-full h-[500px] object-cover" />
+            <button onClick={prevSlide} className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full transition" aria-label="Previous image">
               <ChevronLeft size={24} />
             </button>
-            <button onClick={nextSlide} className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full transition">
+            <button onClick={nextSlide} className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full transition" aria-label="Next image">
               <ChevronRight size={24} />
             </button>
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
               {images.map((_, idx) => (
-                <button key={idx} onClick={() => setCurrentSlide(idx)} className={`w-2 h-2 rounded-full transition ${idx === currentSlide ? 'bg-white' : 'bg-white/50'}`} />
+                <button key={idx} onClick={() => setCurrentSlide(idx)} className={`w-2 h-2 rounded-full transition ${idx === currentSlide ? 'bg-white' : 'bg-white/50'}`} aria-label={`Go to image ${idx + 1}`} />
               ))}
             </div>
           </div>
@@ -60,6 +70,11 @@ function AfricaClimateSummit() {
           </div>
         </div>
       </section>
+      <CTASection 
+        title="Interested in Our Event Services?"
+        description="Let's discuss how we can make your next event a success"
+        buttonText="Contact Us"
+      />
     </div>
   );
 }

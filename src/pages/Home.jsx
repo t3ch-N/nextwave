@@ -1,5 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
+import Testimonials from '../components/Testimonials';
+import Newsletter from '../components/Newsletter';
+import ClientLogos from '../components/ClientLogos';
+import Stats from '../components/Stats';
+import FAQ from '../components/FAQ';
+import SEO from '../components/SEO';
 
 function Home() {
   const [isMuted, setIsMuted] = useState(true);
@@ -14,6 +20,10 @@ function Home() {
 
   return (
     <>
+      <SEO 
+        title="Home"
+        description="Nextwave PR - Leading 360° corporate communications agency in Kenya. Strategic communication, media relations, events management, and film production since 2017."
+      />
       <section id="hero" className="min-h-screen relative flex items-center justify-center overflow-hidden">
         <video
           ref={videoRef}
@@ -33,7 +43,7 @@ function Home() {
           {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
         </button>
         <div className="relative text-center text-white px-4 sm:px-6 max-w-4xl z-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-4 sm:mb-6">360° CORPORATE COMMUNICATIONS</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-4 sm:mb-6" role="heading" aria-level="1">360° CORPORATE COMMUNICATIONS</h1>
           <p className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10">Established 2017 • Nairobi, Kenya • Delivering impact across Africa</p>
           <a href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium transition">Let's Create Your Next Big Moment</a>
         </div>
@@ -51,12 +61,19 @@ function Home() {
               src="/videos/1st 30min documentary.mp4"
               controls
               preload="metadata"
+              aria-label="Nextwave PR 30-minute documentary"
             >
               Your browser does not support the video tag.
             </video>
           </div>
         </div>
       </section>
+
+      <ClientLogos />
+      <Stats />
+      <Testimonials />
+      <FAQ />
+      <Newsletter />
     </>
   );
 }

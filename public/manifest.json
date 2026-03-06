@@ -1,0 +1,26 @@
+{
+  "name": "Nextwave Public Relations",
+  "short_name": "Nextwave PR",
+  "description": "360° Corporate Communications Agency in Kenya",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/NEXTWAVE UPDATED LOGOS/FLAVICON.ICON LOGO/FLAVICON.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/NEXTWAVE UPDATED LOGOS/FLAVICON.ICON LOGO/FLAVICON.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "communications", "marketing"],
+  "screenshots": []
+}

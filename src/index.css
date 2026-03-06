@@ -1,11 +1,42 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
+  transition: opacity 0.3s;
 }
 
-/* Video optimization for long videos */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
 video {
   will-change: transform;
 }
@@ -15,12 +46,8 @@ video {
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .animate-scroll {
@@ -31,46 +58,3 @@ video {
   animation-play-state: paused;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: #0f1b2a;
-}
-
-.navbar a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-.navbar img {
-  height: 50px;
-}
-
-.page {
-  padding: 60px 10%;
-}
-
-.footer {
-  background: #0f1b2a;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 10px;
-}
-
-.contact-form button {
-  padding: 12px 20px;
-  background: #002f6c;
-  color: white;
-  border: none;
-  cursor: pointer;
-}

@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.netlify/
+
+# Allow all images
+Allow: /images/
+Allow: /videos/
+
+# Sitemap location
+Sitemap: https://nextwave-pr.co.ke/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1

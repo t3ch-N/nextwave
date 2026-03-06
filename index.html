@@ -2,12 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/images/NEXTWAVE UPDATED LOGOS/FLAVICON.ICON LOGO/FLAVICON.png" />
+    <link rel="manifest" href="/manifest.json" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nextwave-pr</title>
+    <meta name="theme-color" content="#2563eb" />
+    <title>Nextwave Public Relations | Strategic Communications & PR Services in Kenya</title>
+    <meta name="description" content="Leading PR and communications agency in Kenya. We deliver strategic media relations, corporate communications, and event management services." />
+    <meta name="keywords" content="PR Kenya, Public Relations, Communications Agency, Media Relations, Corporate Events, Nairobi PR" />
+    <meta property="og:title" content="Nextwave Public Relations" />
+    <meta property="og:description" content="Strategic Communications & PR Services in Kenya" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/nw-secondary-logo-no-bg.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Nextwave Public Relations Ltd",
+      "url": "https://nextwave-pr.co.ke",
+      "logo": "https://nextwave-pr.co.ke/images/nw-secondary-logo-no-bg.png",
+      "description": "360° Corporate Communications Agency in Kenya",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st Floor, Riara Corporate Suites, Mararo Avenue",
+        "addressLocality": "Nairobi",
+        "addressCountry": "KE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+254-729-971-313",
+        "contactType": "Customer Service",
+        "email": "pr@nextwave-pr.co.ke"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/nextwave-pr",
+        "https://twitter.com/nextwavepr",
+        "https://www.facebook.com/nextwavepr"
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
   </body>
 </html>

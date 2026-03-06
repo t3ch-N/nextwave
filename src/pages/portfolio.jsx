@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
 
 function Portfolio() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -25,19 +27,22 @@ function Portfolio() {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + commImages.length) % commImages.length);
 
   return (
-    <div className="pt-20">
-      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl"></div>
+    <div className="pt-0">
+      <SEO 
+        title="Portfolio"
+        description="Explore Nextwave PR's portfolio showcasing excellence in corporate communications, events management, and multimedia production across Africa."
+      />
+      <section className="relative text-white py-20 overflow-hidden">
+        <img src="/images/NEXTWAVE UPDATED LOGOS/NW-BRAND PATTERN.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">Our Portfolio</h2>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90 drop-shadow-lg">Showcasing excellence in corporate communications across Africa</p>
         </div>
-        
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Our Portfolio</h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">Showcasing excellence in corporate communications across Africa</p>
-          </div>
-          
+      </section>
+
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="mb-12 sm:mb-16 md:mb-20">
             <div className="flex items-center gap-4 mb-6 sm:mb-8">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -84,37 +89,43 @@ function Portfolio() {
               <Link to="/events/africa-climate-summit" className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer">
                 <img src="/images/Africa-Climate-Summit-2025-2.webp" alt="Africa Climate Summit" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
-                  <p className="text-white text-sm font-semibold">Africa Climate Summit</p>
+                  <p className="text-white text-sm font-bold">Africa Climate Summit</p>
                 </div>
               </Link>
               <Link to="/events/magical-kenya-open" className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer">
                 <img src="/images/magicalkenyaopen.webp" alt="Magical Kenya Open" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
-                  <p className="text-white text-sm font-semibold">Magical Kenya Open</p>
+                  <p className="text-white text-sm font-bold">Magical Kenya Open</p>
                 </div>
               </Link>
               <Link to="/events/wash-campaign" className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer">
                 <img src="/images/athi/1758185938701.jpg" alt="WASH Campaign Roadshow" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
-                  <p className="text-white text-sm font-semibold">WASH Campaign Roadshow</p>
+                  <p className="text-white text-sm font-bold">WASH Campaign Roadshow</p>
                 </div>
               </Link>
               <Link to="/events/water-sanitation-narsip" className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer">
                 <img src="/images/athi/1758185939343.jpg" alt="Water Sanitation NaRSIP II" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
-                  <p className="text-white text-sm font-semibold">Water Sanitation NaRSIP II</p>
+                  <p className="text-white text-sm font-bold">Water Sanitation NaRSIP II</p>
                 </div>
               </Link>
               <Link to="/events/corporate-events" className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer">
                 <img src="/images/corporateevents.png" alt="Corporate Event" className="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
-                  <p className="text-white text-sm font-semibold">Corporate Events</p>
+                  <p className="text-white text-sm font-bold">Corporate Events</p>
                 </div>
               </Link>
             </div>
           </div>
         </div>
       </section>
+
+      <CTASection 
+        title="Ready to Start Your Project?"
+        description="Let's create something amazing together"
+        buttonText="Get in Touch"
+      />
     </div>
   );
 }

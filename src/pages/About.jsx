@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Award, Users, Briefcase, TrendingUp, Target, Eye, Heart, CheckCircle } from 'lucide-react';
+import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
 
 function About() {
   const [counts, setCounts] = useState({ years: 0, clients: 0, projects: 0, team: 0 });
@@ -39,10 +41,14 @@ function About() {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="pt-0">
+      <SEO 
+        title="About Us"
+        description="Founded in 2017, Nextwave PR is a leading 360° corporate communications agency in Kenya with 8+ years experience, 150+ clients, and 500+ projects completed."
+      />
       {/* Hero Section */}
       <section className="relative text-white py-24 overflow-hidden">
-        <img src="/images/Frame 4.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/NEXTWAVE UPDATED LOGOS/NW-BRAND PATTERN.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in drop-shadow-lg">About Nextwave</h1>
@@ -145,7 +151,7 @@ function About() {
                 className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-xl border border-blue-100 hover:border-blue-600 hover:shadow-lg transition-all group"
               >
                 <CheckCircle className="w-8 h-8 text-blue-600 mb-3 group-hover:scale-110 transition-transform" />
-                <p className="font-semibold text-gray-900">{service}</p>
+                <p className="font-bold text-gray-900">{service}</p>
               </div>
             ))}
           </div>
@@ -200,7 +206,7 @@ function About() {
             <div onClick={() => setSelectedTeam({ name: "Syindu Musesya (Poshia)", role: "Project Lead / Managing Director", bio: "9+ years in communications, events & project management. Experienced in strategic planning and execution for international clients.", img: "/images/syindu-musesya.jpg" })} className="bg-white rounded-3xl overflow-hidden shadow-lg cursor-pointer hover:shadow-2xl transition max-w-sm">
               <img src="/images/syindu-musesya.jpg" alt="Syindu Musesya" className="w-full h-80 object-cover" />
               <div className="p-6">
-                <h4 className="font-semibold text-xl">Syindu Musesya (Poshia)</h4>
+                <h4 className="font-bold text-xl">Syindu Musesya (Poshia)</h4>
                 <p className="text-blue-600">Project Lead / Managing Director</p>
               </div>
             </div>
@@ -220,18 +226,11 @@ function About() {
         </div>
       )}
 
-      {/* CTA */}
-      <section className="relative text-white py-20 overflow-hidden">
-        <img src="/images/Frame 4.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-6 drop-shadow-lg">Ready to Transform Your Communication?</h2>
-          <p className="text-xl mb-8 opacity-90 drop-shadow-lg">Let's build your brand's reputation together</p>
-          <a href="/contact" className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl hover:shadow-2xl">
-            Get in Touch
-          </a>
-        </div>
-      </section>
+      <CTASection 
+        title="Ready to Transform Your Communication?"
+        description="Let's build your brand's reputation together"
+        buttonText="Get in Touch"
+      />
     </div>
   );
 }

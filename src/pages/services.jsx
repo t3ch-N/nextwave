@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Camera, Video, Megaphone, Users, Briefcase, TrendingUp, Award, Globe, Droplet } from 'lucide-react';
+import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
 
 function Services() {
   const services = [
@@ -98,10 +100,14 @@ function Services() {
   }, []);
 
   return (
-    <div className="pt-20">
+    <div className="pt-0">
+      <SEO 
+        title="Our Services"
+        description="360° Corporate Communications Solutions: Strategic Communication, Media Relations, Events Management, Film Production, Digital Marketing, and more."
+      />
       {/* Hero Section */}
       <section className="relative text-white py-20 overflow-hidden">
-        <img src="/images/Frame 4.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/NEXTWAVE UPDATED LOGOS/NW-BRAND PATTERN.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">Our Services</h1>
@@ -140,7 +146,7 @@ function Services() {
                   </div>
                   <h3 className="text-3xl font-bold text-gray-900">{service.title}</h3>
                 </div>
-                <p className="text-xl text-gray-700 mb-4 font-semibold">{service.desc}</p>
+                <p className="text-xl text-gray-700 mb-4 font-bold">{service.desc}</p>
                 <p className="text-lg text-gray-600 leading-relaxed">{service.details}</p>
               </div>
             </div>
@@ -155,36 +161,25 @@ function Services() {
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-blue-50 rounded-xl hover:shadow-lg transition">
               <div className="text-4xl font-bold text-blue-600 mb-2">8+</div>
-              <p className="text-gray-700 font-semibold">Years Experience</p>
+              <p className="text-gray-700 font-bold">Years Experience</p>
             </div>
             <div className="text-center p-6 bg-blue-50 rounded-xl hover:shadow-lg transition">
               <div className="text-4xl font-bold text-blue-600 mb-2">150+</div>
-              <p className="text-gray-700 font-semibold">Happy Clients</p>
+              <p className="text-gray-700 font-bold">Happy Clients</p>
             </div>
             <div className="text-center p-6 bg-blue-50 rounded-xl hover:shadow-lg transition">
               <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-              <p className="text-gray-700 font-semibold">Projects Completed</p>
+              <p className="text-gray-700 font-bold">Projects Completed</p>
             </div>
             <div className="text-center p-6 bg-blue-50 rounded-xl hover:shadow-lg transition">
               <div className="text-4xl font-bold text-blue-600 mb-2">25+</div>
-              <p className="text-gray-700 font-semibold">Team Members</p>
+              <p className="text-gray-700 font-bold">Team Members</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative text-white py-20 overflow-hidden">
-        <img src="/images/Frame 4.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-6 drop-shadow-lg">Ready to Elevate Your Brand?</h2>
-          <p className="text-xl mb-8 opacity-90 drop-shadow-lg">Let's discuss how we can help you achieve your communication goals</p>
-          <a href="/contact" className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl hover:shadow-2xl">
-            Get Started Today
-          </a>
-        </div>
-      </section>
+      <CTASection />
     </div>
   );
 }
